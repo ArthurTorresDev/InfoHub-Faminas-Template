@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAMINAS Estágios | Portal Oficial de Práticas e Estágios Supervisionados</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#0a1a3c",
+            "background": "#f8f9ff",
+            "primary-fixed": "#dae2ff",
+            "secondary-fixed-dim": "#aac7ff",
+            "surface": "#f8f9ff",
+            "inverse-primary": "#b7c6f1",
+            "on-primary-fixed-variant": "#38466a",
+            "secondary": "#005cba",
+            "error-container": "#ffdad6",
+            "tertiary": "#040100",
+            "on-secondary-fixed-variant": "#00458e",
+            "on-error-container": "#93000a",
+            "tertiary-fixed": "#ffddb8",
+            "success-green": "#16A34A",
+            "on-surface": "#0b1c30",
+            "outline-variant": "#c5c6cf",
+            "on-error": "#ffffff",
+            "surface-container": "#e5eeff",
+            "primary-container": "#0b1b3d",
+            "surface-bright": "#f8f9ff",
+            "surface-subtle": "#F1F5F9",
+            "on-tertiary-container": "#b97600",
+            "error": "#ba1a1a",
+            "on-secondary-container": "#002d61",
+            "on-surface-variant": "#45464e",
+            "secondary-fixed": "#d7e3ff",
+            "outline": "#75777f",
+            "on-tertiary-fixed-variant": "#653e00",
+            "surface-container-highest": "#d3e4fe",
+            "on-primary-container": "#7684ac",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#001b3e",
+            "accent-sky": "#38BDF8",
+            "primary-fixed-dim": "#b7c6f1",
+            "on-tertiary-fixed": "#2a1700",
+            "surface-dim": "#cbdbf5",
+            "surface-container-high": "#dce9ff",
+            "secondary-container": "#5095fe",
+            "primary": "#00020a",
+            "on-primary": "#ffffff",
+            "tertiary-container": "#2c1800",
+            "surface-variant": "#d3e4fe",
+            "surface-page": "#F8FAFC",
+            "accent-cyan": "#0284C7",
+            "surface-tint": "#505e83",
+            "inverse-on-surface": "#eaf1ff",
+            "on-background": "#0b1c30",
+            "inverse-surface": "#213145",
+            "on-tertiary": "#ffffff",
+            "surface-container-low": "#eff4ff",
+            "danger-red": "#DC2626",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed-dim": "#ffb95f",
+            "surface-card": "#FFFFFF"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "gutter-mobile": "1rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "margin": "2rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter"],
+            "label-sm": ["Inter"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "body-sm": ["Inter"],
+            "label-md": ["Inter"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "fontWeight": "400" }],
+            "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-xl": ["2.5rem", { "lineHeight": "3rem", "letterSpacing": "-0.025em", "fontWeight": "800" }],
+            "body-sm": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }],
+            "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-lg-mobile": ["1.625rem", { "lineHeight": "2.125rem", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "title-md": ["1.125rem", { "lineHeight": "1.625rem", "fontWeight": "600" }],
+            "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-md": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }],
+            "headline-lg": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-surface-page text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component Execution) -->
+<header class="docked full-width top-0 sticky z-50 bg-surface-container-lowest dark:bg-primary-container shadow-sm border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-space-lg max-w-7xl mx-auto h-16">
+<!-- Brand Logo / Product Name -->
+<a class="flex items-center gap-space-sm group" href="#inicio">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-surface-bright shadow-sm group-hover:bg-secondary transition-colors duration-200">
+<span class="material-symbols-outlined text-surface-bright text-[24px]">school</span>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-surface-bright tracking-tight">FAMINAS Estágios</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant -mt-1 hidden sm:block">Faculdade de Minas</span>
+</div>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-secondary dark:text-accent-sky font-semibold border-b-2 border-secondary dark:border-accent-sky pb-1 text-label-lg font-label-lg transition-colors duration-150" href="#inicio">Início</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary dark:hover:text-accent-sky text-label-lg font-label-lg transition-colors duration-150" href="#modalidades">Modalidades</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary dark:hover:text-accent-sky text-label-lg font-label-lg transition-colors duration-150" href="#jornada">Jornada do Estágio</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary dark:hover:text-accent-sky text-label-lg font-label-lg transition-colors duration-150" href="#vagas">Vagas</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary dark:hover:text-accent-sky text-label-lg font-label-lg transition-colors duration-150" href="#atendimento">Atendimento</a>
+</nav>
+<!-- Trailing Action Cluster -->
+<div class="flex items-center gap-space-sm">
+<a class="hidden sm:inline-flex items-center text-label-lg font-label-lg text-secondary hover:text-on-secondary-fixed-variant px-3 py-2 rounded-lg transition-colors duration-150" href="#atendimento">
+          Fale Conosco
+        </a>
+<!-- Portal do Aluno Primary Action -->
+<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary hover:bg-secondary px-4 py-2 rounded-lg text-label-lg font-label-lg shadow-sm transition-all duration-200 active:scale-95 group" href="https://portal.faminas.edu.br" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">account_circle</span>
+<span>Portal do Aluno</span>
+<span class="material-symbols-outlined text-[16px] text-surface-dim group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+<!-- Icons Actions -->
+<div class="hidden md:flex items-center border-l border-outline-variant pl-3 ml-1 gap-1">
+<button aria-label="Notificações" class="p-2 text-on-surface-variant hover:text-secondary rounded-lg transition-colors duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<a aria-label="Ajuda" class="p-2 text-on-surface-variant hover:text-secondary rounded-lg transition-colors duration-150" href="#atendimento">
+<span class="material-symbols-outlined text-[20px]">help</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow">
+<!-- Hero / Institutional Introduction Section -->
+<section class="w-full bg-gradient-to-b from-surface-container-low via-surface-page to-surface-page py-space-xl border-b border-surface-container" id="inicio">
+<div class="max-w-7xl mx-auto px-space-lg">
+<!-- Breadcrumb & Tag -->
+<div class="flex items-center gap-2 mb-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-surface-container-highest text-secondary font-semibold">
+<span class="material-symbols-outlined text-[14px]">assured_workload</span>
+            Núcleo de Práticas e Estágios Supervisionados
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Guia Oficial do Estudante</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-10">
+<div class="lg:col-span-8">
+<h1 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-primary tracking-tight mb-4">
+              Estágios: O que são e como funcionam.
+            </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed max-w-3xl">
+              O Núcleo de Práticas e Estágios da FAMINAS é a unidade acadêmico-administrativa responsável por orientar, formalizar e certificar todas as atividades práticas desenvolvidas pelos alunos junto às empresas conveniadas e órgãos parceiros, garantindo pleno respaldo legal e conformidade curricular.
+            </p>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">
+<div class="bg-surface-card p-4 rounded-xl border border-outline-variant shadow-sm flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">route</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Caminho no Portal</p>
+<p class="text-body-sm font-body-sm font-semibold text-primary">Secretaria &gt; Requerimentos</p>
+</div>
+</div>
+<div class="bg-surface-card p-4 rounded-xl border border-outline-variant shadow-sm flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Segurança Jurídica</p>
+<p class="text-body-sm font-body-sm font-semibold text-primary">Lei Federal nº 11.788/2008</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Card de Destaque Centralizado Obrigatório -->
+<div class="w-full bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low p-6 sm:p-8 rounded-xl border border-secondary-fixed shadow-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-secondary-fixed opacity-30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col sm:flex-row items-start gap-4">
+<div class="p-3 bg-secondary text-surface-bright rounded-xl shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]" data-weight="fill">school</span>
+</div>
+<div class="space-y-2">
+<span class="text-label-md font-label-md text-secondary font-bold tracking-wide uppercase">Diretriz Pedagógica Institucional</span>
+<p class="text-body-lg font-body-lg text-on-surface font-medium leading-relaxed">
+                Na instituição, o estágio funciona como uma etapa prática essencial vinculada aos requisitos de cada curso e disciplina. O objetivo acadêmico do estágio obrigatório é cumprir a carga horária específica exigida para que o aluno seja aprovado na disciplina. Já o estágio não obrigatório tem como objetivo a extensão da vivência prática e a conversão do tempo de atuação em horas complementares para o estudante.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Modalidades de Estágio Section -->
+<section class="py-space-xl max-w-7xl mx-auto px-space-lg" id="modalidades">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+<div>
+<span class="text-label-md font-label-md text-secondary font-bold uppercase tracking-wider">Classificação Curricular</span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary">Tipos de Estágio</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1">Entenda as especificidades, prazos e impactos de cada categoria no seu percurso de graduação.</p>
+</div>
+</div>
+<!-- Grid 2 Colunas Lado a Lado -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch mb-8">
+<!-- Card 1: Estágio Obrigatório -->
+<div class="bg-surface-card rounded-xl border border-outline-variant p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200">
+<div>
+<!-- Header do Card -->
+<div class="flex items-start justify-between gap-4 mb-6">
+<div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-[#DCFCE7] text-[#15803D] font-bold mb-3">
+<span class="material-symbols-outlined text-[14px]">task_alt</span>
+                  Requisito Curricular
+                </span>
+<h3 class="text-headline-md font-headline-md text-primary">Estágio Obrigatório</h3>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[26px]">menu_book</span>
+</div>
+</div>
+<!-- Bullet Points Exatos -->
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="text-body-md font-body-md text-on-surface">Os prazos para a realização desta modalidade seguem estritamente o calendário acadêmico.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="text-body-md font-body-md text-on-surface">Cada curso, período e disciplina possui a sua própria exigência de carga horária.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="text-body-md font-body-md text-on-surface">É obrigatório que o aluno cumpra essa carga horária de forma integral para ser aprovado na disciplina correspondente.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="text-body-md font-body-md text-on-surface">Alunos que trabalham com registro em carteira (CLT) podem cumprir o estágio obrigatório no próprio local de trabalho, desde que a coordenação do curso aprove a conversão.</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-4 border-t border-surface-container flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Vinculação direta à matriz</span>
+<span class="font-semibold text-primary">Aprovação indispensável</span>
+</div>
+</div>
+<!-- Card 2: Estágio Não Obrigatório (Extracurricular) -->
+<div class="bg-surface-card rounded-xl border border-outline-variant p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200">
+<div>
+<!-- Header do Card -->
+<div class="flex items-start justify-between gap-4 mb-6">
+<div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-[#E0F2FE] text-[#0369A1] font-bold mb-3">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+                  Vivência &amp; Horas Complementares
+                </span>
+<h3 class="text-headline-md font-headline-md text-primary">Estágio Não Obrigatório (Extracurricular)</h3>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[26px]">workspace_premium</span>
+</div>
+</div>
+<!-- Bullet Points Exatos -->
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">add_task</span>
+<span class="text-body-md font-body-md text-on-surface">O prazo de realização pode ser estendido por meio de um termo aditivo, adicionando mais 1 (um) semestre letivo de atuação em campo.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">add_task</span>
+<span class="text-body-md font-body-md text-on-surface">Esta extensão está condicionada à realização da rematrícula do aluno na instituição.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">add_task</span>
+<span class="text-body-md font-body-md text-on-surface"><strong class="font-semibold text-primary">As horas realizadas podem ser validadas como horas complementares</strong>, onde cada 30 horas de estágio são convertidas em 2 horas complementares.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">add_task</span>
+<span class="text-body-md font-body-md text-on-surface">Existe um limite máximo de 100 horas complementares que podem ser geradas através desta modalidade.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">add_task</span>
+<span class="text-body-md font-body-md text-on-surface">As horas realizadas no estágio não obrigatório podem ser utilizadas para cumprir a carga horária do Estágio Obrigatório, mediante aprovação da coordenação do curso.</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-4 border-t border-surface-container flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Conversão: 30h de estágio = 2h complementares</span>
+<span class="font-semibold text-secondary">Máx. 100 horas</span>
+</div>
+</div>
+</div>
+<!-- Box de Aviso (Validação de Trabalho/Estágio) Obrigatório -->
+<div class="bg-surface-card border-l-4 border-secondary rounded-r-xl border-y border-r border-outline-variant p-6 shadow-sm flex items-start gap-4">
+<div class="p-2.5 bg-surface-container text-secondary rounded-lg shrink-0">
+<span class="material-symbols-outlined text-[24px]">info</span>
+</div>
+<div>
+<h4 class="text-title-md font-title-md text-primary mb-1">Aproveitamento e Validação</h4>
+<p class="text-body-md font-body-md text-on-surface leading-relaxed">
+            Horas de trabalho com registro em carteira (CLT) ou de estágio extracurricular podem ser convertidas e aproveitadas para cumprimento da carga horária do Estágio Obrigatório, mediante submissão dos documentos comprobatórios e aprovação da coordenação do curso.
+          </p>
+</div>
+</div>
+</section>
+<!-- Jornada do Estágio (Timeline Passo a Passo 01 a 05) -->
+<section class="py-space-xl bg-surface-container-low border-y border-surface-container" id="jornada">
+<div class="max-w-7xl mx-auto px-space-lg">
+<div class="max-w-3xl mb-12">
+<span class="text-label-md font-label-md text-secondary font-bold uppercase tracking-wider">Fluxo Processual do Aluno</span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary mt-1">Jornada do Estágio</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-2">
+            Acompanhe o passo a passo completo, desde a solicitação inicial no portal acadêmico até a conferência de horas e arquivamento formal.
+          </p>
+</div>
+<div class="space-y-6">
+<!-- Passo 01 -->
+<div class="bg-surface-card rounded-xl border border-outline-variant p-6 lg:p-8 shadow-sm transition-all duration-200 hover:border-secondary">
+<div class="flex flex-col md:flex-row md:items-start gap-6">
+<div class="flex items-center gap-4 shrink-0">
+<span class="text-headline-xl font-headline-xl text-secondary opacity-40 leading-none">01</span>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">devices</span>
+</div>
+</div>
+<div class="flex-grow space-y-2">
+<div class="flex items-center gap-3 flex-wrap">
+<h3 class="text-headline-sm font-headline-sm text-primary">Passo 1: Solicitação Inicial</h3>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface font-semibold">Início do Processo</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface leading-relaxed">
+                  O primeiro passo é solicitar o Termo de Compromisso de Estágio (TCE) diretamente no Portal do Aluno. A solicitação deve ser feita no caminho <strong class="text-primary font-semibold">Secretaria &gt; Requerimentos</strong>.
+                </p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-1.5 text-label-lg font-label-lg text-secondary hover:text-on-secondary-fixed-variant font-semibold" href="https://portal.faminas.edu.br" rel="noopener noreferrer" target="_blank">
+<span>Acessar Portal do Aluno</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Passo 02 -->
+<div class="bg-surface-card rounded-xl border border-outline-variant p-6 lg:p-8 shadow-sm transition-all duration-200 hover:border-secondary">
+<div class="flex flex-col md:flex-row md:items-start gap-6">
+<div class="flex items-center gap-4 shrink-0">
+<span class="text-headline-xl font-headline-xl text-secondary opacity-40 leading-none">02</span>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">attach_file</span>
+</div>
+</div>
+<div class="flex-grow space-y-4">
+<div class="flex items-center gap-3 flex-wrap">
+<h3 class="text-headline-sm font-headline-sm text-primary">Passo 2: Documentação</h3>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface font-semibold">Anexos Obrigatórios</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                  Ao abrir o requerimento, é imprescindível fazer o upload de todos os comprovantes exigidos conforme a modalidade selecionada:
+                </p>
+<!-- Sub-blocos de Documentação -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+<!-- Bloco Obrigatório -->
+<div class="bg-surface-subtle p-5 rounded-lg border border-outline-variant">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">assignment</span>
+<h4 class="text-title-md font-title-md text-primary">Estágio Obrigatório</h4>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface leading-relaxed">
+                      Anexar a Apólice do seguro de vida (com cobertura para Acidentes Pessoais/Invalidez Permanente) e o Comprovante de pagamento do seguro.
+                    </p>
+</div>
+<!-- Bloco Não Obrigatório -->
+<div class="bg-surface-subtle p-5 rounded-lg border border-outline-variant">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">description</span>
+<h4 class="text-title-md font-title-md text-primary">Estágio Não Obrigatório</h4>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface leading-relaxed">
+                      Anexar a Apólice do seguro de vida, o Comprovante de pagamento e o Plano de Atividades devidamente preenchido e assinado pelo aluno, pelo supervisor de campo e pela coordenação do curso.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Passo 03: Prazos e Regras de Vigência + Alerta Crítico -->
+<div class="bg-surface-card rounded-xl border border-outline-variant p-6 lg:p-8 shadow-sm transition-all duration-200 hover:border-secondary">
+<div class="flex flex-col md:flex-row md:items-start gap-6">
+<div class="flex items-center gap-4 shrink-0">
+<span class="text-headline-xl font-headline-xl text-secondary opacity-40 leading-none">03</span>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">schedule</span>
+</div>
+</div>
+<div class="flex-grow space-y-4">
+<div class="flex items-center gap-3 flex-wrap">
+<h3 class="text-headline-sm font-headline-sm text-primary">Passo 3: Prazos e Regras de Vigência</h3>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface font-semibold">Análise Cadastral</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface leading-relaxed">
+                  O setor possui um prazo de <strong class="font-bold text-primary">5 dias úteis</strong> para a emissão do documento. É importante destacar que datas que antecedem a abertura do requerimento não são contabilizadas, não sendo permitida a validação de períodos retroativos.
+                </p>
+<!-- Alerta de Regra Crítica Integrado Obrigatório -->
+<div class="bg-error-container/40 border-l-4 border-danger-red p-4 rounded-r-lg border-y border-r border-outline-variant/60 flex items-start gap-3">
+<span class="material-symbols-outlined text-danger-red text-[22px] shrink-0 mt-0.5">warning</span>
+<div>
+<span class="text-label-md font-label-md font-bold text-danger-red uppercase tracking-wide">Regra de Vigência e Conformidade</span>
+<p class="text-body-sm font-body-sm text-on-surface mt-0.5">
+<strong class="font-bold text-primary">Atenção:</strong> Não são contabilizadas datas retroativas à abertura do requerimento. O período de vigência é válido estritamente a partir do deferimento e emissão do termo.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Passo 04: Assinaturas -->
+<div class="bg-surface-card rounded-xl border border-outline-variant p-6 lg:p-8 shadow-sm transition-all duration-200 hover:border-secondary">
+<div class="flex flex-col md:flex-row md:items-start gap-6">
+<div class="flex items-center gap-4 shrink-0">
+<span class="text-headline-xl font-headline-xl text-secondary opacity-40 leading-none">04</span>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">draw</span>
+</div>
+</div>
+<div class="flex-grow space-y-2">
+<div class="flex items-center gap-3 flex-wrap">
+<h3 class="text-headline-sm font-headline-sm text-primary">Passo 4: Assinaturas</h3>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface font-semibold">Validação das Partes</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface leading-relaxed">
+                  Os Termos de Compromisso emitidos pela FAMINAS são enviados ao aluno já com as assinaturas internas da instituição. Fica a cargo do estudante assinar o documento e colher a assinatura da empresa (campo concedente).
+                </p>
+</div>
+</div>
+</div>
+<!-- Passo 05: Conclusão e Validação de Horas -->
+<div class="bg-surface-card rounded-xl border border-outline-variant p-6 lg:p-8 shadow-sm transition-all duration-200 hover:border-secondary">
+<div class="flex flex-col md:flex-row md:items-start gap-6">
+<div class="flex items-center gap-4 shrink-0">
+<span class="text-headline-xl font-headline-xl text-secondary opacity-40 leading-none">05</span>
+<div class="w-12 h-12 rounded-xl bg-[#DCFCE7] flex items-center justify-center text-[#15803D]">
+<span class="material-symbols-outlined text-[26px]" data-weight="fill">verified</span>
+</div>
+</div>
+<div class="flex-grow space-y-4">
+<div class="flex items-center gap-3 flex-wrap">
+<h3 class="text-headline-sm font-headline-sm text-primary">Passo 5: Conclusão e Validação de Horas</h3>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-[#DCFCE7] text-[#15803D] font-bold">Encerramento &amp; Créditos</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                  Para formalizar o término ou solicitar o cômputo curricular, siga as diretrizes específicas de conclusão:
+                </p>
+<div class="space-y-3">
+<!-- Item 1 -->
+<div class="p-4 rounded-lg bg-surface-subtle border border-outline-variant">
+<p class="text-body-md font-body-md text-on-surface">
+<strong class="font-bold text-primary">Validação de Horas (Não Obrigatório):</strong> Acessar o requerimento 'Assuntos de Estágios' no Portal do Aluno e encaminhar a via do Termo de Compromisso assinada, juntamente com o Relatório de Atividades preenchido e assinado.
+                    </p>
+</div>
+<!-- Item 2 -->
+<div class="p-4 rounded-lg bg-surface-subtle border border-outline-variant">
+<p class="text-body-md font-body-md text-on-surface">
+<strong class="font-bold text-primary">Conversão de Trabalho/Estágio Extracurricular:</strong> Solicitar o 'Termo de Conversão em Estágio Obrigatório' (em Secretaria &gt; Requerimentos &gt; Disponíveis) e enviar os documentos comprobatórios, como cópia da carteira de trabalho, contracheque e Plano de Atividades assinado.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Seção de Vagas e Atendimento e Suporte -->
+<section class="py-space-xl max-w-7xl mx-auto px-space-lg" id="vagas">
+<!-- Card Informativo: Divulgação de Vagas de Estágio Obrigatório -->
+<div class="mb-12 bg-gradient-to-br from-surface-card via-surface-card to-surface-container-low rounded-xl border border-secondary/30 p-6 sm:p-8 shadow-sm relative overflow-hidden">
+<div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+<div class="w-14 h-14 rounded-2xl bg-secondary text-surface-bright flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[32px]">campaign</span>
+</div>
+<div class="space-y-2 flex-grow">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-highest text-secondary font-bold">Canal Exclusivo de Oportunidades</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary">Divulgação de Vagas de Estágio</h3>
+<p class="text-body-md font-body-md text-on-surface leading-relaxed">
+              As vagas de estágio não possuem mural próprio no site. As oportunidades são encaminhadas diretamente aos coordenadores de cada curso, que realizam a divulgação periódica nos grupos de WhatsApp dos representantes estudantis.
+            </p>
+</div>
+</div>
+</div>
+<!-- Atendimento e Suporte -->
+<div class="pt-4" id="atendimento">
+<div class="max-w-3xl mb-8">
+<span class="text-label-md font-label-md text-secondary font-bold uppercase tracking-wider">Canais Oficiais</span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary">Atendimento e Suporte</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-1">
+            Entre em contato com a equipe do Núcleo de Práticas e Estágios pelos canais autorizados da instituição.
+          </p>
+</div>
+<!-- Grid de Contatos (4 Cards Interativos) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card WhatsApp -->
+<div class="bg-surface-card rounded-xl border border-outline-variant p-6 shadow-sm hover:border-[#16A34A] hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-[#DCFCE7] text-[#15803D] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">chat</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase font-semibold">Mensagens Instantâneas</p>
+<h3 class="text-title-md font-title-md text-primary mt-1">WhatsApp Setorial</h3>
+<p class="text-headline-sm font-headline-sm text-[#15803D] font-bold mt-2">(32) 3729-7501</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container">
+<a class="inline-flex items-center gap-1.5 text-label-lg font-label-lg text-[#15803D] hover:underline font-semibold" href="https://wa.me/553237297501" rel="noopener noreferrer" target="_blank">
+<span>Iniciar Conversa</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Card Telefone Fixo -->
+<div class="bg-surface-card rounded-xl border border-outline-variant p-6 shadow-sm hover:border-secondary hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container text-secondary flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">call</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase font-semibold">Central Telefônica</p>
+<h3 class="text-title-md font-title-md text-primary mt-1">Telefone Fixo</h3>
+<p class="text-headline-sm font-headline-sm text-primary font-bold mt-2">(32) 3729-7534</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Atendimento em horário comercial</span>
+</div>
+</div>
+<!-- Card E-mail do Setor -->
+<div class="bg-surface-card rounded-xl border border-outline-variant p-6 shadow-sm hover:border-secondary hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container text-secondary flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">mail</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase font-semibold">Correspondência Digital</p>
+<h3 class="text-title-md font-title-md text-primary mt-1">E-mail do Setor</h3>
+<p class="text-body-sm font-body-sm text-primary font-bold mt-2 break-all">estagios.mre@faminas.edu.br</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container">
+<a class="inline-flex items-center gap-1.5 text-label-lg font-label-lg text-secondary hover:underline font-semibold" href="mailto:estagios.mre@faminas.edu.br">
+<span>Enviar E-mail</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Card Atendimento Presencial -->
+<div class="bg-surface-card rounded-xl border border-outline-variant p-6 shadow-sm hover:border-secondary hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container text-secondary flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">location_on</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase font-semibold">Campus Universitário</p>
+<h3 class="text-title-md font-title-md text-primary mt-1">Atendimento Presencial</h3>
+<p class="text-body-sm font-body-sm text-on-surface mt-2 font-medium">Coordenação de Cursos-FAMINAS. Horário comercial: das 08h00 às 18h00.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container">
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-success-green inline-block"></span>
+                Segunda a Sexta-feira
+              </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Banner Final com CTA para o Portal -->
+<section class="bg-primary-container text-surface-bright py-12 border-t border-primary">
+<div class="max-w-7xl mx-auto px-space-lg flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="space-y-2 text-center md:text-left">
+<h2 class="text-headline-md font-headline-md text-surface-bright">Pronto para iniciar ou regularizar seu estágio?</h2>
+<p class="text-body-md font-body-md text-surface-dim">Acesse o Portal do Aluno e solicite seu Termo de Compromisso diretamente em Secretaria &gt; Requerimentos.</p>
+</div>
+<div class="flex items-center gap-4 shrink-0">
+<a class="bg-secondary hover:bg-secondary-container text-on-secondary px-6 py-3 rounded-lg text-label-lg font-label-lg font-semibold shadow-md transition-all duration-200 active:scale-95 flex items-center gap-2" href="https://portal.faminas.edu.br" rel="noopener noreferrer" target="_blank">
+<span>Acessar Portal do Aluno</span>
+<span class="material-symbols-outlined text-[18px]">launch</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component Execution) -->
+<footer class="docked full-width bottom-0 bg-primary-container dark:bg-surface-container-lowest border-t border-outline-variant">
+<div class="w-full max-w-7xl mx-auto px-space-lg py-space-xl flex flex-col gap-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Brand Block in Footer -->
+<div class="md:col-span-4 space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent-sky text-[28px]">school</span>
+<span class="text-headline-sm font-headline-sm font-bold text-surface-bright dark:text-primary">FAMINAS Estágios</span>
+</div>
+<p class="text-body-sm font-body-sm text-surface-dim dark:text-on-surface-variant max-w-sm">
+            Faculdade de Minas. Núcleo de Práticas e Estágios Supervisionados. Compromisso com a excelência acadêmica e a qualificação profissional prática.
+          </p>
+<div class="pt-2">
+<span class="inline-flex items-center gap-2 text-label-sm font-label-sm text-accent-sky">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              MEC Reconhecido • Credenciamento Institucional Pleno
+            </span>
+</div>
+</div>
+<!-- Links Rápidos e Regulamentos -->
+<div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+<div>
+<h4 class="text-title-md font-title-md text-surface-bright dark:text-primary mb-3">Documentos Oficiais</h4>
+<ul class="space-y-2 text-label-md font-label-md">
+<li>
+<a class="text-surface-dim dark:text-on-surface-variant hover:text-surface-bright dark:hover:text-primary transition-colors duration-150" href="#modalidades">Regulamento Geral de Estágios</a>
+</li>
+<li>
+<a class="text-surface-dim dark:text-on-surface-variant hover:text-surface-bright dark:hover:text-primary transition-colors duration-150" href="#jornada">Termo de Compromisso (TCE)</a>
+</li>
+<li>
+<a class="text-surface-dim dark:text-on-surface-variant hover:text-surface-bright dark:hover:text-primary transition-colors duration-150" href="#vagas">Convênios &amp; Empresas</a>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="text-title-md font-title-md text-surface-bright dark:text-primary mb-3">Sistemas Acadêmicos</h4>
+<ul class="space-y-2 text-label-md font-label-md">
+<li>
+<a class="text-surface-dim dark:text-on-surface-variant hover:text-surface-bright dark:hover:text-primary transition-colors duration-150" href="https://portal.faminas.edu.br" rel="noopener noreferrer" target="_blank">Portal Acadêmico</a>
+</li>
+<li>
+<a class="text-surface-dim dark:text-on-surface-variant hover:text-surface-bright dark:hover:text-primary transition-colors duration-150" href="#inicio">Políticas de Privacidade</a>
+</li>
+<li>
+<a class="text-surface-dim dark:text-on-surface-variant hover:text-surface-bright dark:hover:text-primary transition-colors duration-150" href="#atendimento">Ouvidoria</a>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="text-title-md font-title-md text-surface-bright dark:text-primary mb-3">Atendimento Rápido</h4>
+<div class="text-body-sm font-body-sm text-surface-dim dark:text-on-surface-variant space-y-1">
+<p>Segunda a Sexta</p>
+<p class="font-semibold text-surface-bright dark:text-primary">08h00 às 18h00</p>
+<p class="pt-2 text-accent-sky font-medium">estagios.mre@faminas.edu.br</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Divisor e Copyright Exato -->
+<div class="pt-6 border-t border-surface-container/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-surface-dim dark:text-on-surface-variant">
+<p>© 2024 FAMINAS - Faculdade de Minas. Todos os direitos reservados. Núcleo de Práticas e Estágios Supervisionados.</p>
+<div class="flex items-center gap-4 text-label-sm font-label-sm">
+<span>Campus Muriaé - MG</span>
+<span>•</span>
+<span>Versão 2.4.0</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
