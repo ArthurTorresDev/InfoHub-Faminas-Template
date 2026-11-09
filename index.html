@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- ====================================================================
        ATENÇÃO ESTUDANTES: 
        Ajuste a tag <title> e a <meta description> para o nome do seu setor.
        Exemplo: "Achados e Perdidos — InfoHub FAMINAS"
        ==================================================================== -->
-  <title>Setor: [Nome do Setor] — InfoHub FAMINAS</title>
+  <title>Setor: Estágios — InfoHub FAMINAS</title>
   <meta name="description"
     content="Canal de autoatendimento institucional desenvolvido pelos discentes de Análise e Desenvolvimento de Sistemas (ADS) na disciplina de Engenharia de Software da FAMINAS." />
 
@@ -55,12 +55,8 @@
 
       <div class="header-actions">
         <!-- Botão oficial de retorno ao Hub Principal -->
-        <a 
-          href="https://infohub-faminas.vercel.app" 
-          class="btn btn-primary-highlight btn-portal" 
-          id="link-retornar-hub"
-          aria-label="Retornar à página inicial do InfoHub FAMINAS"
-        >
+        <a href="https://infohub-faminas.vercel.app" class="btn btn-primary-highlight btn-portal" id="link-retornar-hub"
+          aria-label="Retornar à página inicial do InfoHub FAMINAS">
           <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
           <span>Retornar ao InfoHub</span>
         </a>
@@ -84,12 +80,13 @@
 
         <!-- [EDITÁVEL]: Nome do Setor -->
         <h1 id="hero-heading" class="hero-title">
-          Setor: <span>[Nome do Setor Institucional]</span>
+          Setor: <span>Estágios</span>
         </h1>
 
         <!-- [EDITÁVEL]: Descrição e Propósito do Setor apurados na entrevista -->
         <p class="hero-description">
-          Canal unificado de autoatendimento, mapeamento de processos oficiais, orientações normativas e canais de contato homologados junto à coordenação e gestão setorial da FAMINAS.
+          Canal unificado de autoatendimento, mapeamento de processos oficiais, orientações normativas e canais de
+          contato homologados junto à coordenação e gestão setorial da FAMINAS.
         </p>
 
         <div class="hero-badges-group" aria-label="Informações do autoatendimento">
@@ -117,22 +114,50 @@
          REQUISITO: Utilize HTML5 semântico (section, article, div, ul, details).
          Para criar estilos novos, edite o arquivo "css/custom.css".
          ==================================================================== -->
-    <section id="features" class="sector-content-section" aria-labelledby="sector-content-heading">
+    <section id="features" class="sector-content-section" aria-labelledby="internship-intro-heading">
       <div class="container">
-        
-        <!-- Cabeçalho da Seção Central -->
-        <div class="sector-section-header">
-          <div class="sector-section-tag">
-            <span class="material-symbols-outlined" aria-hidden="true">help_center</span>
-            <span>Guia Prático e Procedimentos</span>
+
+        <section class="internship-intro" aria-labelledby="internship-intro-heading">
+          <div class="internship-intro-heading">
+            <div class="internship-intro-tag">
+              <span class="material-symbols-outlined" aria-hidden="true">assured_workload</span>
+              <span>Núcleo de Práticas e Estágios Supervisionados</span>
+            </div>
+            <span class="internship-intro-eyebrow">Guia Oficial do Estudante</span>
+            <h2 id="internship-intro-heading">Estágios: O que são e como funcionam?</h2>
+            <p>O Núcleo de Práticas e Estágios da FAMINAS é a unidade acadêmico-administrativa responsável por orientar,
+              formalizar e certificar as atividades práticas dos alunos junto a empresas conveniadas e órgãos parceiros,
+              garantindo respaldo legal e conformidade curricular.</p>
           </div>
-          <h2 id="sector-content-heading" class="sector-section-title">
-            Como Podemos Ajudar Você Hoje?
-          </h2>
-          <p class="sector-section-subtitle">
-            Consulte as principais solicitações, prazos e canais de atendimento direto mapeados pela equipe discente.
-          </p>
-        </div>
+
+          <div class="internship-intro-facts" aria-label="Informações importantes sobre estágio">
+            <article class="internship-fact-card">
+              <span class="material-symbols-outlined" aria-hidden="true">route</span>
+              <div>
+                <h3>Caminho no Portal</h3>
+                <p>Secretaria &gt; Requerimentos</p>
+              </div>
+            </article>
+            <article class="internship-fact-card">
+              <span class="material-symbols-outlined" aria-hidden="true">verified_user</span>
+              <div>
+                <h3>Segurança Jurídica</h3>
+                <p>Lei Federal nº 11.788/2008</p>
+              </div>
+            </article>
+          </div>
+
+          <aside class="internship-guideline">
+            <span class="material-symbols-outlined" aria-hidden="true">school</span>
+            <div>
+              <span class="internship-guideline-label">Diretriz Pedagógica Institucional</span>
+              <p>O estágio é uma etapa prática vinculada aos requisitos de cada curso e disciplina. O estágio
+                <strong>obrigatório</strong> cumpre a carga horária exigida para aprovação; o estágio
+                <strong>não obrigatório</strong> amplia a vivência profissional e pode ser convertido em horas
+                complementares.</p>
+            </div>
+          </aside>
+        </section>
 
         <!-- EXEMPLO DE BLOCO 1: Grid de Tópicos / Serviços Frequentes -->
         <div class="sector-grid">
@@ -140,12 +165,13 @@
             <div class="sector-card-icon" aria-hidden="true">
               <span class="material-symbols-outlined">assignment</span>
             </div>
-            <h3 class="sector-card-title">Orientações e Normas</h3>
+            <h3 class="sector-card-title">Modalidades de Estágio</h3>
             <p class="sector-card-text">
-              Consulte a regulamentação oficial, formulários obrigatórios e o passo a passo para abertura formal de chamados.
+              Entenda as diferenças entre estágio obrigatório e não obrigatório, além das possibilidades de
+              aproveitamento de horas.
             </p>
-            <a href="#fluxo" class="btn btn-outline-light" style="color: var(--color-primary-navy) !important; border-color: var(--color-border);">
-              Ver Passo a Passo
+            <a href="#modalidades" class="btn btn-outline-light sector-card-link">
+              Conhecer modalidades
             </a>
           </article>
 
@@ -155,10 +181,10 @@
             </div>
             <h3 class="sector-card-title">Prazos e Calendário</h3>
             <p class="sector-card-text">
-              Fique atento às datas-limite para envio de requerimentos, renovações e homologação de documentos institucionais.
+              Confira as etapas de solicitação, entrega de documentos, emissão do termo e validação das horas.
             </p>
-            <a href="#prazos" class="btn btn-outline-light" style="color: var(--color-primary-navy) !important; border-color: var(--color-border);">
-              Consultar Datas
+            <a href="#jornada" class="btn btn-outline-light sector-card-link">
+              Ver etapas
             </a>
           </article>
 
@@ -168,92 +194,434 @@
             </div>
             <h3 class="sector-card-title">Canais de Atendimento</h3>
             <p class="sector-card-text">
-              Localização física no campus, horários de funcionamento presencial, telefone, e-mail institucional e WhatsApp oficial.
+              Consulte os canais oficiais do setor e saiba como as oportunidades de estágio são divulgadas.
             </p>
-            <a href="#contato" class="btn btn-outline-light" style="color: var(--color-primary-navy) !important; border-color: var(--color-border);">
-              Ver Contatos
+            <a href="#atendimento" class="btn btn-outline-light sector-card-link">
+              Ver canais
             </a>
           </article>
         </div>
 
         <!-- EXEMPLO DE BLOCO 2: Fluxo Passo a Passo -->
-        <div id="fluxo" style="margin-top: 3rem; background: var(--color-bg-card); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
-          <h3 style="font-size: 1.35rem; color: var(--color-primary-navy); margin-bottom: 0.5rem;">
-            Passo a Passo do Processo Setorial
-          </h3>
-          <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-            Siga as etapas abaixo para protocolar ou resolver sua demanda com rapidez:
-          </p>
+        <section id="modalidades" class="content-panel" aria-labelledby="modalidades-heading">
+          <div class="content-section-heading">
+            <span class="content-section-kicker">Classificação Curricular</span>
+            <h3 id="modalidades-heading">Tipos de Estágio</h3>
+            <p>Entenda as especificidades, prazos e impactos de cada modalidade no seu percurso de graduação.</p>
+          </div>
 
-          <ol class="process-steps-list">
-            <li class="process-step-item">
-              <span class="step-number">1</span>
-              <div class="step-content">
-                <strong>Reunir a Documentação Necessária</strong>
-                <p>Verifique com antecedência os comprovantes exigidos e tenha em mãos seu número de matrícula institucional.</p>
+          <div class="modality-grid">
+            <article class="modality-card">
+              <div class="modality-card-heading">
+                <div>
+                  <span class="status-badge status-badge-success">
+                    <span class="material-symbols-outlined" aria-hidden="true">task_alt</span>
+                    Requisito Curricular
+                  </span>
+                  <h4>Estágio Obrigatório</h4>
+                </div>
+                <span class="modality-icon material-symbols-outlined" aria-hidden="true">menu_book</span>
+              </div>
+              <ul class="check-list">
+                <li>Os prazos seguem o calendário acadêmico.</li>
+                <li>Cada curso, período e disciplina possui sua própria exigência de carga horária.</li>
+                <li>É necessário cumprir integralmente a carga horária exigida para aprovação na disciplina.</li>
+                <li>O trabalho CLT pode ser aproveitado mediante aprovação da coordenação do curso.</li>
+              </ul>
+              <div class="modality-card-footer">
+                <span>Vinculação direta à matriz curricular</span>
+                <strong>Aprovação indispensável</strong>
+              </div>
+            </article>
+
+            <article class="modality-card">
+              <div class="modality-card-heading">
+                <div>
+                  <span class="status-badge status-badge-info">
+                    <span class="material-symbols-outlined" aria-hidden="true">trending_up</span>
+                    Vivência e horas complementares
+                  </span>
+                  <h4>Estágio Não Obrigatório</h4>
+                </div>
+                <span class="modality-icon material-symbols-outlined" aria-hidden="true">workspace_premium</span>
+              </div>
+              <ul class="check-list">
+                <li>O prazo pode ser estendido por mais um semestre letivo por meio de termo aditivo e rematrícula.</li>
+                <li>A cada 30 horas realizadas, podem ser validadas 2 horas complementares.</li>
+                <li>O limite de aproveitamento nessa modalidade é de 100 horas complementares.</li>
+                <li>As horas podem ser usadas no estágio obrigatório, com aprovação da coordenação.</li>
+              </ul>
+              <div class="modality-card-footer">
+                <span>Conversão: 30h de estágio = 2h complementares</span>
+                <strong>Máximo de 100 horas</strong>
+              </div>
+            </article>
+          </div>
+
+          <aside class="notice-card">
+            <span class="material-symbols-outlined" aria-hidden="true">info</span>
+            <div>
+              <h4>Aproveitamento e validação</h4>
+              <p>Horas de trabalho CLT ou de estágio extracurricular podem ser aproveitadas para cumprir a carga horária
+                do estágio obrigatório, mediante envio dos documentos comprobatórios e aprovação da coordenação.</p>
+            </div>
+          </aside>
+        </section>
+
+        <section id="jornada" class="journey-section" aria-labelledby="jornada-heading">
+          <div class="content-section-heading">
+            <span class="content-section-kicker">Fluxo Processual do Aluno</span>
+            <h3 id="jornada-heading">Jornada do Estágio: Passo a Passo</h3>
+            <p>Confira as etapas para solicitar, formalizar e validar seu estágio.</p>
+          </div>
+
+          <ol class="journey-list">
+            <li class="journey-card">
+              <span class="journey-number">01</span>
+              <div class="journey-content">
+                <div class="journey-heading">
+                  <h4>Solicitação Inicial</h4>
+                  <span class="journey-label">
+                    <span class="material-symbols-outlined" aria-hidden="true">account_circle</span>
+                    Portal do Aluno
+                  </span>
+                </div>
+                <p>O primeiro passo é solicitar o <strong>Termo de Compromisso de Estágio (TCE)</strong> diretamente
+                  no Portal do Aluno. A solicitação deve ser feita no caminho
+                  <strong>Secretaria &gt; Requerimentos</strong>.</p>
+                <a class="text-action" href="https://portal.faminas.edu.br" target="_blank"
+                  rel="noopener noreferrer">
+                  Acessar Portal do Aluno
+                  <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+                </a>
               </div>
             </li>
-            <li class="process-step-item">
-              <span class="step-number">2</span>
-              <div class="step-content">
-                <strong>Protocolar o Requerimento</strong>
-                <p>Abra o requerimento pelo portal acadêmico ou compareça presencialmente ao setor nos horários indicados.</p>
+            <li class="journey-card">
+              <span class="journey-number">02</span>
+              <div class="journey-content">
+                <div class="journey-heading">
+                  <h4>Anexo de Documentação (Obrigatório)</h4>
+                  <span class="journey-label">
+                    <span class="material-symbols-outlined" aria-hidden="true">verified_user</span>
+                    Estágio obrigatório
+                  </span>
+                </div>
+                <p>Para o estágio obrigatório, o aluno deve anexar na solicitação a <strong>Apólice do seguro de
+                    vida</strong> (com cobertura para <strong>Acidentes Pessoais/Invalidez Permanente</strong>) e o
+                  <strong>Comprovante de pagamento</strong> do seguro.
+                </p>
               </div>
             </li>
-            <li class="process-step-item">
-              <span class="step-number">3</span>
-              <div class="step-content">
-                <strong>Acompanhar o Parecer e Retirada</strong>
-                <p>Acompanhe o status do chamado e receba a confirmação ou retirada do documento protocolado.</p>
+            <li class="journey-card">
+              <span class="journey-number">03</span>
+              <div class="journey-content">
+                <div class="journey-heading">
+                  <h4>Anexo de Documentação (Não Obrigatório)</h4>
+                  <span class="journey-label">
+                    <span class="material-symbols-outlined" aria-hidden="true">description</span>
+                    Estágio não obrigatório
+                  </span>
+                </div>
+                <p>Para a modalidade não obrigatória, é necessário anexar a <strong>Apólice do seguro de vida</strong>,
+                  o <strong>Comprovante de pagamento</strong> e o <strong>Plano de Atividades</strong> devidamente
+                  preenchido e assinado pelo aluno, pelo supervisor de campo e pela coordenação do curso.</p>
+              </div>
+            </li>
+            <li class="journey-card">
+              <span class="journey-number">04</span>
+              <div class="journey-content">
+                <div class="journey-heading">
+                  <h4>Prazos e Regras de Vigência</h4>
+                  <span class="journey-label">
+                    <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+                    Prazo: 5 dias úteis
+                  </span>
+                </div>
+                <p>O setor possui um prazo de <strong>5 dias úteis</strong> para a emissão do documento. É importante
+                  destacar que datas que antecedem a abertura do requerimento <strong>não são contabilizadas</strong>,
+                  não sendo permitida a validação de períodos retroativos.</p>
+              </div>
+            </li>
+            <li class="journey-card">
+              <span class="journey-number">05</span>
+              <div class="journey-content">
+                <div class="journey-heading">
+                  <h4>Assinaturas</h4>
+                  <span class="journey-label">
+                    <span class="material-symbols-outlined" aria-hidden="true">draw</span>
+                    Formalização do termo
+                  </span>
+                </div>
+                <p>Os Termos de Compromisso emitidos pela FAMINAS são enviados ao aluno já com as <strong>assinaturas
+                    internas da instituição</strong>. Fica a cargo do estudante assinar o documento e colher a
+                  assinatura da <strong>empresa (campo concedente)</strong>.</p>
+              </div>
+            </li>
+            <li class="journey-card">
+              <span class="journey-number">06</span>
+              <div class="journey-content">
+                <div class="journey-heading">
+                  <h4>Validação de Horas (Não Obrigatório)</h4>
+                  <span class="journey-label">
+                    <span class="material-symbols-outlined" aria-hidden="true">school</span>
+                    Horas complementares
+                  </span>
+                </div>
+                <p>Para converter o estágio não obrigatório em <strong>horas complementares</strong>, o aluno deve
+                  acessar o requerimento <strong>"Assuntos de Estágios"</strong> no Portal do Aluno e encaminhar a via
+                  do Termo de Compromisso assinada, juntamente com o <strong>Relatório de Atividades</strong>
+                  preenchido e assinado.</p>
+              </div>
+            </li>
+            <li class="journey-card">
+              <span class="journey-number">07</span>
+              <div class="journey-content">
+                <div class="journey-heading">
+                  <h4>Conversão de Trabalho/Estágio Extracurricular</h4>
+                  <span class="journey-label">
+                    <span class="material-symbols-outlined" aria-hidden="true">swap_horiz</span>
+                    Aproveitamento de experiência
+                  </span>
+                </div>
+                <p>Para aproveitar o trabalho <strong>CLT</strong> ou o estágio não obrigatório como Estágio Obrigatório,
+                  o aluno deve solicitar o <strong>"Termo de Conversão em Estágio Obrigatório"</strong> (em
+                  <strong>Secretaria &gt; Requerimentos &gt; Disponíveis</strong>) e enviar os documentos
+                  comprobatórios, como cópia da carteira de trabalho, contracheque e Plano de Atividades assinado.</p>
               </div>
             </li>
           </ol>
-        </div>
+        </section>
 
         <!-- EXEMPLO DE BLOCO 3: Perguntas Frequentes (FAQ) -->
-        <div style="margin-top: 3rem;">
-          <h3 style="font-size: 1.35rem; color: var(--color-primary-navy); margin-bottom: 1rem;">
-            Dúvidas Frequentes do Setor
+        <div id="faq" style="margin-top: 3rem;">
+          <h3 style="font-size: 1.35rem; color: var(--color-primary-navy); margin-bottom: 0.5rem;">
+            FAQ: Dúvidas Frequentes sobre Estágios
           </h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Com base nas informações institucionais e nas principais dúvidas dos alunos, confira a seção de Perguntas e
+            Respostas formatada de maneira direta e em etapas claras:
+          </p>
           <div class="faq-accordion">
+            <!-- Dúvida 1 -->
             <details class="faq-item">
               <summary class="faq-summary">
-                <span>Qual é o prazo médio de resposta para solicitações deste setor?</span>
+                <span>1. Qual é o primeiro passo para iniciar um estágio?</span>
                 <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
               </summary>
               <div class="faq-content">
-                O prazo de análise institucional varia entre 2 a 5 dias úteis, dependendo da complexidade do requerimento e do calendário acadêmico vigente.
+                <p>O primeiro passo é solicitar o <strong>Termo de Compromisso de Estágio (TCE)</strong> através do
+                  <strong>Portal do Aluno</strong>.
+                </p>
+                <p>O setor de estágios possui um prazo de <strong>5 dias úteis</strong> para a emissão do documento.</p>
               </div>
             </details>
+
+            <!-- Dúvida 2 -->
             <details class="faq-item">
               <summary class="faq-summary">
-                <span>O atendimento presencial exige agendamento prévio?</span>
+                <span>2. Quais documentos preciso entregar para começar o estágio?</span>
                 <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
               </summary>
               <div class="faq-content">
-                Para a maioria dos serviços o atendimento é por ordem de chegada na recepção do setor. Em períodos de pico de matrícula ou eventos especiais, recomenda-se verificar aviso oficial.
+                <p><strong>Estágio Obrigatório:</strong> É necessário enviar a <strong>Apólice do seguro de
+                    vida</strong> com cobertura para Acidentes Pessoais (Invalidez Permanente) e o respectivo
+                  comprovante de pagamento.</p>
+                <p><strong>Estágio Não Obrigatório:</strong> Deve-se anexar a <strong>Apólice do seguro de
+                    vida</strong>, o comprovante de pagamento e o <strong>Plano de Atividades</strong> devidamente
+                  preenchido e assinado pelo aluno, pelo supervisor de campo e pela coordenação do curso.</p>
+              </div>
+            </details>
+
+            <!-- Dúvida 3 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>3. Onde posso encontrar vagas de estágio?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                <p>A instituição <strong>não possui um mural físico ou digital</strong> para divulgação direta de vagas.
+                </p>
+                <p>As oportunidades são encaminhadas para os <strong>coordenadores de cada curso</strong>, que ficam
+                  responsáveis por repassá-las nos grupos de WhatsApp dos representantes estudantis.</p>
+              </div>
+            </details>
+
+            <!-- Dúvida 4 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>4. Quem deve assinar o Termo de Compromisso de Estágio (TCE)?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                <p>Os Termos de Compromisso emitidos pela FAMINAS já são enviados ao estudante com as devidas
+                  <strong>assinaturas internas da instituição</strong>.
+                </p>
+                <p>Cabe exclusivamente ao aluno assinar o documento e coletar a assinatura do responsável no campo
+                  concedente do estágio (a empresa).</p>
+              </div>
+            </details>
+
+            <!-- Dúvida 5 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>5. Posso utilizar meu trabalho registrado (CLT) ou meu estágio não obrigatório para abater as
+                  horas do estágio obrigatório?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                <p><strong>Sim</strong>, alunos que trabalham com registro em carteira ou que realizam estágio
+                  extracurricular podem utilizar essa experiência para cumprir o estágio obrigatório, desde que a
+                  coordenação do curso aprove.</p>
+                <p>A solicitação deve ser feita no Portal do Aluno no caminho:<br>
+                  <span class="faq-path">Secretaria &gt; Requerimentos &gt; Disponíveis &gt; Termo de Conversão em
+                    Estágio Obrigatório</span>
+                </p>
+                <ul class="faq-list">
+                  <li><strong>Para CLT:</strong> É necessário anexar cópia da carteira de trabalho (página de
+                    identificação e do contrato), cópia do último contracheque, Declaração de solicitação e o Plano de
+                    Atividades assinado.</li>
+                  <li><strong>Para Estágio Não Obrigatório:</strong> Deve-se anexar a via do TCE Não Obrigatório
+                    assinada e o Plano de Atividades assinado pelo estudante, supervisor de campo e professor da
+                    disciplina.</li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Dúvida 6 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>6. Como funciona o aproveitamento de horas complementares pelo estágio não obrigatório?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                <p>A cada <strong>30 horas de estágio</strong> realizadas em campo, o aluno garante <strong>2 horas
+                    complementares</strong>.</p>
+                <p>O limite máximo que pode ser gerado nessa modalidade é de <strong>100 horas complementares</strong>.
+                </p>
+                <p>Para validar, o aluno deve abrir um requerimento de <strong>"Assuntos de Estágios"</strong> no Portal
+                  do Aluno e anexar a via do TCE e o Relatório de Atividades preenchido e assinado.</p>
+              </div>
+            </details>
+
+            <!-- Dúvida 7 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>7. Quais são os erros mais comuns que atrasam a documentação?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                <ul class="faq-list">
+                  <li>A falta de envio dos anexos corretos e completos na solicitação, como a apólice do seguro, o
+                    comprovante de pagamento ou o plano de atividades.</li>
+                  <li>Preenchimento incorreto de informações básicas, como dias e horários, nome do supervisor ou número
+                    de registro.</li>
+                  <li>Erro na data de Início de Vigência: o sistema não contabiliza datas retroativas (anteriores à
+                    abertura do requerimento).</li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Dúvida 8 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>8. Onde posso tirar outras dúvidas ou pedir ajuda para preencher os formulários?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                <ul class="faq-contact-list">
+                  <li class="faq-contact-item">
+                    <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                    <span><strong>Atendimento Presencial:</strong> Ocorre no Setor de Estágios, localizado na
+                      Coordenação de Cursos-FAMINAS, em horário comercial das 08h00 às 18h00.</span>
+                  </li>
+                  <li class="faq-contact-item">
+                    <span class="material-symbols-outlined" aria-hidden="true">call</span>
+                    <span><strong>Telefone:</strong> <a href="tel:+553237297534">(32) 3729-7534</a></span>
+                  </li>
+                  <li class="faq-contact-item">
+                    <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+                    <span><strong>WhatsApp:</strong> <a href="https://wa.me/553237297501" target="_blank"
+                        rel="noopener noreferrer">(32) 3729-7501</a></span>
+                  </li>
+                  <li class="faq-contact-item">
+                    <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+                    <span><strong>E-mail:</strong> <a
+                        href="mailto:estagios.mre@faminas.edu.br">estagios.mre@faminas.edu.br</a></span>
+                  </li>
+                </ul>
               </div>
             </details>
           </div>
         </div>
 
-        <!-- EXEMPLO DE BLOCO 4: Banner de Contato Oficial -->
-        <div id="contato" class="contact-banner">
-          <div class="contact-banner-meta">
-            <h3>Precisa de Atendimento com a Equipe do Setor?</h3>
-            <p>Atendimento presencial no campus FAMINAS • Segunda a Sexta: 08h às 21h</p>
+        <section id="atendimento" class="support-section" aria-labelledby="atendimento-heading">
+          <div class="opportunity-card">
+            <span class="opportunity-icon material-symbols-outlined" aria-hidden="true">campaign</span>
+            <div>
+              <span class="content-section-kicker">Canal Exclusivo de Oportunidades</span>
+              <h3>Divulgação de Vagas de Estágio</h3>
+              <p>As vagas não possuem mural próprio no site. As oportunidades são encaminhadas aos coordenadores de
+                cada curso, que realizam a divulgação nos grupos de WhatsApp dos representantes estudantis.</p>
+            </div>
           </div>
-          <div class="contact-banner-actions">
-            <a href="mailto:atendimento@faminas.edu.br" class="btn btn-outline-light">
-              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
-              <span>Enviar E-mail</span>
-            </a>
-            <a href="tel:+553237297000" class="btn btn-primary-highlight">
-              <span class="material-symbols-outlined" aria-hidden="true">call</span>
-              <span>Ligar para o Setor</span>
-            </a>
+
+          <div class="content-section-heading support-heading" id="contato">
+            <span class="content-section-kicker">Canais Oficiais</span>
+            <h3 id="atendimento-heading">Atendimento e Suporte</h3>
+            <p>Entre em contato com a equipe do Núcleo de Práticas e Estágios pelos canais autorizados da instituição.</p>
           </div>
-        </div>
+
+          <div class="contact-grid">
+            <article class="contact-card contact-card-whatsapp">
+              <span class="contact-icon material-symbols-outlined" aria-hidden="true">chat</span>
+              <span class="contact-eyebrow">Mensagens instantâneas</span>
+              <h4>WhatsApp Setorial</h4>
+              <p class="contact-detail">(32) 3729-7501</p>
+              <a href="https://wa.me/553237297501" target="_blank" rel="noopener noreferrer">
+                Iniciar conversa
+                <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+              </a>
+            </article>
+            <article class="contact-card">
+              <span class="contact-icon material-symbols-outlined" aria-hidden="true">call</span>
+              <span class="contact-eyebrow">Central telefônica</span>
+              <h4>Telefone Fixo</h4>
+              <p class="contact-detail">(32) 3729-7534</p>
+              <a href="tel:+553237297534">
+                Ligar para o setor
+                <span class="material-symbols-outlined" aria-hidden="true">call</span>
+              </a>
+            </article>
+            <article class="contact-card">
+              <span class="contact-icon material-symbols-outlined" aria-hidden="true">mail</span>
+              <span class="contact-eyebrow">Correspondência digital</span>
+              <h4>E-mail do Setor</h4>
+              <p class="contact-detail contact-email">estagios.mre@faminas.edu.br</p>
+              <a href="mailto:estagios.mre@faminas.edu.br">
+                Enviar e-mail
+                <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+              </a>
+            </article>
+            <article class="contact-card">
+              <span class="contact-icon material-symbols-outlined" aria-hidden="true">location_on</span>
+              <span class="contact-eyebrow">Campus Universitário</span>
+              <h4>Atendimento Presencial</h4>
+              <p class="contact-detail">Coordenação de Cursos-FAMINAS. Segunda a sexta-feira, das 08h às 18h.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="portal-cta" aria-labelledby="portal-cta-heading">
+          <div>
+            <h3 id="portal-cta-heading">Pronto para iniciar ou regularizar seu estágio?</h3>
+            <p>Acesse o Portal do Aluno e solicite seu Termo de Compromisso em Secretaria &gt; Requerimentos.</p>
+          </div>
+          <a class="btn btn-primary-highlight" href="https://portal.faminas.edu.br" target="_blank"
+            rel="noopener noreferrer">
+            <span>Acessar Portal do Aluno</span>
+            <span class="material-symbols-outlined" aria-hidden="true">launch</span>
+          </a>
+        </section>
 
       </div>
     </section>
@@ -275,14 +643,9 @@
         </p>
 
         <div class="footer-course-highlight">
-          <a 
-            href="https://www.unifaminas.edu.br/cursos/analise-e-desenvolvimento-de-sistemas" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="footer-course-card"
-            id="link-curso-ads"
-            aria-label="Conheça o curso de Análise e Desenvolvimento de Sistemas na UNIFAMINAS em nova janela"
-          >
+          <a href="https://www.unifaminas.edu.br/cursos/analise-e-desenvolvimento-de-sistemas" target="_blank"
+            rel="noopener noreferrer" class="footer-course-card" id="link-curso-ads"
+            aria-label="Conheça o curso de Análise e Desenvolvimento de Sistemas na UNIFAMINAS em nova janela">
             <div class="footer-course-icon" aria-hidden="true">
               <span class="material-symbols-outlined">school</span>
             </div>
