@@ -1,119 +1,88 @@
-# Template Setorial — InfoHub FAMINAS
+# InfoHub FAMINAS — Estágios
 
-Estrutura padrão de desenvolvimento para os grupos discentes da disciplina de **Engenharia de Software** do curso de **Análise e Desenvolvimento de Sistemas (ADS)** da **FAMINAS**.
+Página de autoatendimento do Núcleo de Práticas e Estágios da FAMINAS. O site reúne orientações sobre as modalidades de estágio, etapas de formalização, dúvidas frequentes e canais oficiais de atendimento em uma interface responsiva.
 
-Este repositório serve como base técnica e visual obrigatória para a criação da página de autoatendimento do setor institucional atribuído à sua equipe no **Projeto de Extensão Universitária**.
+> **A página inicial é `index.html`, mantida na raiz do repositório** para publicação direta pelo GitHub Pages.
 
----
+## Conteúdo do site
 
-## 🎯 Objetivo da Atividade
+- **Modalidades de estágio:** diferenças entre estágio obrigatório e não obrigatório.
+- **Jornada do estágio:** etapas, documentos, prazos e orientações para formalizar e validar o estágio.
+- **Perguntas frequentes:** respostas às principais dúvidas de estudantes.
+- **Atendimento e suporte:** telefone, WhatsApp, e-mail e informações de atendimento presencial.
+- **Equipe de desenvolvedores:** apresentação dos estudantes responsáveis pelo projeto.
 
-Após realizarem as entrevistas empíricas com a gestão do setor sorteado e mapearem os requisitos, dores dos alunos, processos oficiais e canais de contato, cada equipe discente deve construir a página de autoatendimento daquele setor.
+## Tecnologias
 
-Para garantir que o ecossistema digital da FAMINAS mantenha coerência, credibilidade e alto padrão estético, **todas as páginas setoriais devem seguir rigorosamente esta estrutura base**.
+- HTML5 semântico
+- CSS3 responsivo
+- JavaScript nativo com módulos ES
+- Google Fonts e Material Symbols para tipografia e ícones
 
----
+Não é necessário instalar dependências nem executar uma etapa de build. As fontes e os ícones são carregados de serviços externos e precisam de conexão com a internet.
 
-## 🛡️ Regras e Padrões Obrigatórios
-
-### 1. O que NÃO pode ser alterado ❌
-* **Cores Institucionais e Tipografia:** Não altere o arquivo `css/variables.css` nem os estilos em `css/base.css`. O esquema de cores institucional (Azul Marinho, Ciano FAMINAS, Branco Puro e Neutros) é imutável.
-* **Cabeçalho (Header):** O logotipo oficial da FAMINAS, o título `InfoHub FAMINAS` e o botão `"Retornar ao InfoHub"` devem ser mantidos intactos.
-* **Rodapé (Footer):** O rodapé com as assinaturas da FAMINAS, créditos curriculares do curso de ADS, card de destaque para o curso de ADS e os botões dos modais institucionais (*Sobre o Projeto*, *Termos de Uso* e *Política de Privacidade*) **deve permanecer rigorosamente inalterado**.
-* **Zero Banco de Dados & Zero Frameworks Pesados:** Não utilize bibliotecas ou frameworks como React, Vue, Angular, Bootstrap, Tailwind, Supabase ou Firebase. O projeto adota **Vanilla Web Standards** (HTML5 semântico, CSS3 e JavaScript puro).
-
-### 2. O que DEVE ser personalizado pela equipe ✅
-* **Título da Página (`<title>` e `<meta description>`):** Insira o nome do seu setor (ex: `Achados e Perdidos — InfoHub FAMINAS`).
-* **Seção Hero:** 
-  * Altere o título `Setor: <span>[Nome do Setor]</span>` para o nome do setor atendido.
-  * Atualize o parágrafo explicativo com o propósito e resumo do setor apurados durante a entrevista.
-* **Área Central (Features / Conteúdo Setorial):**
-  * **Liberdade total de modelagem e conteúdo!**
-  * Vocês podem estruturar o conteúdo com base na entrevista com o gestor do setor:
-    * Mapeamento dos principais serviços e requerimentos;
-    * Fluxograma ou passo a passo sequencial dos procedimentos;
-    * Prazos, calendários e taxas aplicáveis;
-    * Canais oficiais de contato (e-mail, ramal, WhatsApp, localização física no campus);
-    * Perguntas frequentes (FAQ) para sanar as dúvidas mais recorrentes da comunidade.
-  * Para criar novos estilos ou ajustar os componentes da área central, edite exclusivamente o arquivo `css/custom.css`.
-* **Lógica JavaScript Opcional:**
-  * Se desejarem adicionar comportamentos interativos (ex: copiar dados de contato para a área de transferência, filtros de busca ou cálculos), utilizem o arquivo `js/app.js`.
-
----
-
-## 📂 Estrutura de Arquivos
+## Estrutura do repositório
 
 ```text
-├── index.html              # Estrutura principal da página com marcações de edição
+.
+├── index.html                 # Página inicial; deve permanecer na raiz para o GitHub Pages
+├── README.md                  # Apresentação e instruções do projeto
 ├── assets/
 │   └── images/
-│       └── logo-faminas.png # Logotipo institucional oficial em alta resolução
+│       ├── arthur.jpeg        # Foto de integrante da equipe
+│       ├── heitor.jpeg        # Foto de integrante da equipe
+│       ├── jose.jpeg          # Foto de integrante da equipe
+│       └── logo-faminas.png   # Logotipo institucional
 ├── css/
-│   ├── variables.css       # [NÃO ALTERAR] Tokens e cores institucionais
-│   ├── base.css            # [NÃO ALTERAR] Reset semântico e tipografia oficial
-│   ├── layout.css          # [NÃO ALTERAR] Estrutura do Header, Hero e Footer
-│   ├── modais.css          # [NÃO ALTERAR] Estilos dos modais sobrepostos
-│   └── custom.css          # [ÁREA LIVRE] Folha de estilos para o conteúdo do seu setor
-├── js/
-│   ├── modal-controller.js # [NÃO ALTERAR] Lógica dos modais com nota ética de IA e LGPD
-│   └── app.js              # [ÁREA LIVRE] Ponto de entrada JavaScript para scripts da equipe
-└── README.md               # Este guia de orientações
+│   ├── base.css               # Reset, estilos base e utilitários
+│   ├── custom.css             # Estilos específicos da página de Estágios
+│   ├── layout.css             # Cabeçalho, seções e rodapé
+│   ├── modais.css             # Estilos dos modais institucionais
+│   └── variables.css          # Tokens de cores, tipografia e espaçamento
+├── docs/
+│   ├── design-system.md       # Referência visual do projeto
+│   ├── reference-layout.html  # Protótipo visual de referência; não é a página publicada
+│   └── references/
+│       └── faq-source.odt     # Material de referência das perguntas frequentes
+└── js/
+    ├── app.js                 # Inicialização da aplicação
+    └── modal-controller.js    # Comportamento dos modais institucionais
 ```
 
----
+## Executar localmente
 
-## 🚀 Como Começar (Passo a Passo)
+Clone o repositório:
 
-### 1. Criando a sua cópia no GitHub (Fork)
-1. Clique no botão **Fork** (canto superior direito da página deste repositório no GitHub).
-2. Selecione a sua conta ou a organização da sua equipe discente.
-3. Defina o nome do repositório no padrão sugerido pelo professor:  
-   `infohub-[nome-do-setor]` (exemplo: `infohub-estagios`, `infohub-achados-perdidos`).
-4. Clique em **Create Fork**.
+```bash
+git clone https://github.com/ArthurTorresDev/InfoHub-Faminas-Template.git
+cd InfoHub-Faminas-Template
+```
 
-### 2. Clonando e Executando Localmente
-1. Clone o seu fork para a sua máquina:
-   ```bash
-   git clone https://github.com/SEU_USUARIO/infohub-seu-setor.git
-   ```
-2. Abra a pasta do projeto no **Visual Studio Code**:
-   ```bash
-   cd infohub-seu-setor
-   code .
-   ```
-3. Para testar a página:
-   * **Opção 1 (Direta):** Dê um duplo clique no arquivo `index.html` e ele abrirá no seu navegador.
-   * **Opção 2 (Recomendada):** Instale a extensão **Live Server** no VS Code, clique com o botão direito no `index.html` e selecione **Open with Live Server**.
+Inicie um servidor estático na raiz do projeto:
 
----
+```bash
+python3 -m http.server 8000
+```
 
-## 🌐 Publicação no GitHub Pages (Deploy Gratuito)
+Abra [`http://localhost:8000`](http://localhost:8000) no navegador. Como alternativa, abra a pasta no Visual Studio Code e use a extensão Live Server.
 
-Para que a sua página fique online e o link possa ser integrado à landing page oficial do **InfoHub FAMINAS**, siga estas etapas:
+## Publicar no GitHub Pages
 
-1. No repositório do seu fork no GitHub, acesse a aba **Settings** (Configurações).
-2. No menu lateral esquerdo, clique em **Pages**.
-3. Na seção **Build and deployment**:
-   * Em **Source**, selecione **Deploy from a branch**.
-   * Em **Branch**, selecione `main` (ou `master`) e na pasta selecione `/ (root)`.
-   * Clique em **Save**.
-4. Aguarde de 1 a 2 minutos. O GitHub fornecerá o link público da sua página, no formato:
-   ```text
-   https://SEU_USUARIO.github.io/infohub-seu-setor/
-   ```
-5. Teste o link no celular e no computador para verificar se tudo está carregando perfeitamente.
+1. Envie o projeto para um repositório GitHub.
+2. No repositório, acesse **Settings → Pages**.
+3. Em **Build and deployment**, selecione **Deploy from a branch**.
+4. Selecione a branch de publicação (por exemplo, `main`) e a pasta **`/(root)`**.
+5. Salve e aguarde a conclusão da publicação. O endereço será exibido na própria página de configurações do GitHub Pages.
 
----
+O GitHub Pages serve `index.html` automaticamente quando ele está na raiz selecionada. Mantenha os caminhos relativos dos arquivos (`./css/`, `./js/` e `./assets/`) para que os estilos, scripts e imagens também funcionem quando o site for publicado em um subdiretório.
 
-## ✅ Checklist de Entrega da Equipe
+## Manutenção
 
-Antes de submeter o link final ao professor orientador, certifique-se de que sua página cumpre todos os itens:
+- Atualize o conteúdo institucional somente com informações confirmadas pelo setor responsável.
+- Preserve `index.html` na raiz e verifique se os caminhos de CSS, JavaScript e imagens permanecem válidos.
+- Mantenha os arquivos institucionais de base em `css/`; os estilos específicos desta página ficam em `css/custom.css`.
+- Teste a navegação, os modais, os links de contato e o layout em telas de celular e desktop antes de publicar.
 
-- [ ] **Fidelidade Visual:** Cores, logos e tipografia oficiais FAMINAS mantidas sem distorções.
-- [ ] **Navbar:** Botão `"Retornar ao InfoHub"` funcionando e apontando para o hub central.
-- [ ] **Hero Personalizado:** Nome e resumo do setor devidamente preenchidos.
-- [ ] **Conteúdo Relevante:** Informações reais apuradas nas entrevistas com os gestores setoriais.
-- [ ] **Semântica HTML5:** Utilização de tags semânticas (`<section>`, `<article>`, `<header>`, `<h2>`, `<ol>`, `<details>`).
-- [ ] **Responsividade Mobile:** A página se adapta perfeitamente a smartphones, tablets e computadores.
-- [ ] **Modais Institucionais:** Os botões do rodapé (*Sobre o Projeto*, *Termos de Uso*, *Política de Privacidade*) abrem os modais corretamente.
-- [ ] **GitHub Pages Ativo:** A página está acessível publicamente via link HTTPS do GitHub Pages sem erros 404 de imagens ou scripts.
+## Créditos
+
+Projeto acadêmico de extensão desenvolvido por estudantes de Análise e Desenvolvimento de Sistemas (ADS), na disciplina de Engenharia de Software da FAMINAS.

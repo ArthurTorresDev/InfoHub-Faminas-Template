@@ -320,6 +320,148 @@
   color: var(--color-primary-blue);
 }
 
+#features {
+  padding-bottom: 1.5rem;
+}
+
+.team-section {
+  padding: 0 0 2.5rem;
+}
+
+.team-panel {
+  padding: 2.25rem 2rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-primary-navy), #152E47);
+  box-shadow: var(--shadow-card);
+}
+
+.team-section-header {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.team-section-header h2 {
+  margin: 0 0 0.75rem;
+  color: var(--color-text-inverse);
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+}
+
+.team-section-header p {
+  color: var(--color-text-inverse-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.team-card {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.04);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), background-color var(--transition-smooth);
+}
+
+.team-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-cyan-faminas);
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.team-avatar {
+  position: relative;
+  width: 5.25rem;
+  min-height: 4.75rem;
+  flex: 0 0 auto;
+  align-self: stretch;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-primary-navy-light);
+}
+
+.avatar-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
+.team-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.team-info h3 {
+  margin: 0 0 0.35rem;
+  color: var(--color-text-inverse);
+  font-size: 1.1rem;
+}
+
+.team-role {
+  color: var(--color-cyan-faminas);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.team-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.team-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--color-text-inverse-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.team-btn:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: var(--color-text-inverse);
+  text-decoration: none;
+}
+
+.team-btn .material-symbols-outlined {
+  font-size: 1rem;
+}
+
 /* Conteúdo do Setor de Estágios */
 .internship-intro {
   margin-bottom: 3rem;
@@ -519,6 +661,13 @@
   border-radius: var(--radius-md);
   background: var(--color-bg-card);
   box-shadow: var(--shadow-card);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.modality-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary-blue);
+  box-shadow: var(--shadow-hover);
 }
 
 .modality-card-heading {
@@ -674,6 +823,13 @@
   border-radius: var(--radius-md);
   background-color: var(--color-bg-card);
   box-shadow: var(--shadow-card);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.journey-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--journey-accent);
+  box-shadow: var(--shadow-hover);
 }
 
 .journey-card:nth-child(2) {
@@ -916,6 +1072,12 @@
   overflow-wrap: anywhere;
 }
 
+.back-to-top-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 0;
+}
+
 .contact-email {
   font-size: 0.87rem;
 }
@@ -1032,6 +1194,10 @@
   .portal-cta {
     align-items: flex-start;
     flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .team-panel {
     padding: 1.5rem;
   }
 }
